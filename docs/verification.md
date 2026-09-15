@@ -6,7 +6,10 @@
 
 ## Required evidence for the later prototype
 - [ ] 5 expected questions pass
-- [ ] 2 confusing questions get a safe fallback
+- [ ] 2 confusing questions (no matching or ambiguous source) get a safe fallback
+- [ ] 2 conflicting questions (two approved sources disagree) are flagged as
+      conflicting and routed to a safe handoff, not silently answered from
+      one source
 - [ ] Source and owner display correctly
 - [ ] No private data is required
 
