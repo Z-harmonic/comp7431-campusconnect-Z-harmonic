@@ -26,7 +26,31 @@ source, safe failure, and helpful next step.
 OUT: password resets, ticket creation, personal student records, voice, automatic
 actions, and answers from unapproved material.
 ## 6. AI critique and human decision
-- ChatGPT suggestion: <ADD ONE SHORT SUGGESTION>
-- Claude suggestion: <ADD ONE SHORT SUGGESTION>
-- My decision: Accepted / Revised / Rejected
-- My reason: <EXPLAIN USING WEEK 2 EVIDENCE, SCOPE, OR TESTABILITY>
+- ChatGPT suggestion: SF-01
+  - ASSUMPTION — “helpful IT Support next step” is not defined enough to be consistently testable. Without defining what qualifies as a next step, reviewers cannot reliably determine whether safe-failure behavior passes.
+  - Smallest testable revision: Add: “The response shall provide a specific next step that directs the student to an approved IT Support resource or contact.”
+- Claude suggestion: SF-01
+  - "Insufficient" and "helpful" are undefined, so no one can write a pass/fail test, and nothing says what happens when two approved sources conflict, which is the situation E-02 actually observed.
+  - Safe failure is the MVP's core trust behavior. If it can't be tested, the system could confidently cite one of two conflicting approved pages, repeating the hidden-verification problem in E-02 (ASSUMPTION: the current wording would not treat conflicting sources as "insufficient").
+  - "If no approved source answers the question, or two approved sources give conflicting answers, the system shall return no factual answer and shall display [named IT Support contact channel — to be confirmed with IT Support]; test: submit a question covered by two conflicting approved pages and verify that no answer appears and the contact channel is shown."
+- My decision: Revised
+- My reason: 
+  - I accepted Claude's structure and rejected the scope of its
+  trigger condition. ChatGPT's revision defines only the output of a safe
+  failure; it leaves "insufficient" undefined, so a question covered by two
+  conflicting approved pages would still return a confident, sourced answer.
+  That is exactly the situation E-02 documented, and E-01 explains why it is
+  costly: the student treats the visible interface as the authority even when
+  it does not own the underlying policy. Claude's version defines both the
+  trigger and the behavior and supplies a pass/fail test, which makes SF-01
+  reviewable rather than aspirational. Two human changes: (1) I folded
+  ChatGPT's wording "an approved IT Support resource or contact" into the
+  behavior clause because it is more specific and stays inside the Section 5
+  boundary (no ticket creation, no action taken for the student); (2) I did
+  not accept semantic conflict detection into v1 — for v1, "conflicting" is
+  limited to approved sources carrying different last-updated dates for the
+  same question, which is detectable without interpreting page meaning.
+  Open dependency: the named contact channel must be confirmed with IT
+  Support before SF-01 can be tested. This revision makes SF-01 testable but
+  does not validate A-01, which still requires observing whether a student
+  follows the next step instead of escalating.
