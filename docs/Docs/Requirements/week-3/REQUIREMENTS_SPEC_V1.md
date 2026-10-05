@@ -7,9 +7,9 @@ Students who need IT Support information need a reliable way to find the correct
 next step because the current experience may be scattered, difficult to search, or
 hard to verify as current.
 ## 2. Evidence carried forward from Week 2
-- E-01: <PASTE ONE ANONYMIZED QUOTE OR OBSERVATION FROM THE TEAM EXERCISE>
-- E-02: <PASTE ONE SECOND ANONYMIZED QUOTE OR OBSERVATION>
-- A-01: <NAME ONE ASSUMPTION THAT STILL NEEDS VALIDATION>
+- E-01: An advisor reported that students assume he controls the process "because I am the person they can reach," although he does not own the underlying policy or system.
+- E-02: When two official pages gave conflicting information, the advisor stopped before replying and privately verified with a colleague; this verification was invisible to the student and had to be repeated each time.
+- A-01: We assume a student who receives a safe-failure response plus a next step will follow it rather than escalating to a person. This was not observed before.
 ## 3. One user journey inside the MVP
 A student asks one typed IT Support question. CampusConnect searches only approved
 IT Support material, returns a short answer with a visible source, or says the
