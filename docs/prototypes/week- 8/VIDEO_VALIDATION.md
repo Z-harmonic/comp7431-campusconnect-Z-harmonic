@@ -25,10 +25,13 @@ prerecorded introduction. You can read the same script in our GitHub project.
 5. Share link works without HeyGen sign-in: OBSERVED; PASS
 ## Design decision
 Decision: KEEP
+
 Reason based on my checks: Meet all the check points
 One improvement for later: Upload a customized voice
 ## Engineering and AI Use Log
 AI tool used: HeyGen
 What HeyGen generated: A quick video about CampusConnect IT Help Introduction
+
 What I verified myself: I watched the full 30-second video with captions on and again muted, confirmed the spoken script matches the GitHub transcript word for word, and opened the share link in a private browser window to confirm it plays without a HeyGen sign-in.
+
 Remaining limitation: The presenter is a prerecorded, one-way introduction that cannot answer follow-up questions, and it uses a stock HeyGen voice instead of a customized one.
