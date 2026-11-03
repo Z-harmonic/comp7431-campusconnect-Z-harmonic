@@ -22,3 +22,8 @@ This is a prerecorded introduction. It does not answer questions.
 Decision: <KEEP / CHANGE / REMOVE the presenter idea>
 Reason based on my checks: <ONE SENTENCE>
 One improvement for later: <ONE SENTENCE>
+## Engineering and AI Use Log
+AI tool used: HeyGen
+What HeyGen generated: <ONE SENTENCE>
+What I verified myself: <ONE SENTENCE>
+Remaining limitation: <ONE SENTENCE>
