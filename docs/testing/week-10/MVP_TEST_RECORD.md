@@ -10,32 +10,32 @@ Environment: Chrome on macOS
 
 | # | Quality area | Action and expected result | Observed evidence | Result |
 |---|---|---|---|---|
-| 1 | Supported retrieval | Ask: "How do I reset my CampusConnect password?" The answer uses the approved password-reset passage. | \<FILL IN> | \<FILL IN - PASS or FAIL> |
-| 2 | Citation support | Open the displayed source from Test 1. At least one important answer claim is directly supported by the source passage. | \<FILL IN> | \<FILL IN - PASS or FAIL> |
-| 3 | Unsupported query | Ask: "What are the Thanksgiving dining hall hours?" The system states its IT-support limit and does not invent hours, a source, phone number, or office. | \<FILL IN> | \<FILL IN - PASS or FAIL> |
-| 4 | Voice and text fallback | Use the supported answer. If voice works, its meaning matches the visible grounded answer. If voice is unavailable, the text, source, and a clear Continue in text or retry path remain. | \<FILL IN> | \<FILL IN - PASS or FAIL> |
-| 5 | Video accessibility | Mute the tab and skip the video. AI disclosure and transcript remain visible, and the chatbot is reachable by keyboard. | \<FILL IN> | \<FILL IN - PASS or FAIL> |
-| 6 | Latency and recovery | Time one supported question. Class target: grounded text in 5 seconds or less. If slower, the question is preserved and progress, retry, or text fallback is clear. | \<FILL IN - seconds plus behavior> | \<FILL IN - PASS or FAIL> |
+| 1 | Supported retrieval | Ask: "How do I reset my CampusConnect password?" The answer uses the approved password-reset passage. | IT-01, Password Reset | PASS |
+| 2 | Citation support | Open the displayed source from Test 1. At least one important answer claim is directly supported by the source passage. | The agent is using the elevenlab knowledge base info | PASS |
+| 3 | Unsupported query | Ask: "What are the Thanksgiving dining hall hours?" The system states its IT-support limit and does not invent hours, a source, phone number, or office. | Source: IT-03, IT Service Desk. | PASS |
+| 4 | Voice and text fallback | Use the supported answer. If voice works, its meaning matches the visible grounded answer. If voice is unavailable, the text, source, and a clear Continue in text or retry path remain. | Ask questions about Secure Campus Wi-Fi | PASS |
+| 5 | Video accessibility | Mute the tab and skip the video. AI disclosure and transcript remain visible, and the chatbot is reachable by keyboard. | Tested pass. | PASS |
+| 6 | Latency and recovery | Time one supported question. Class target: grounded text in 5 seconds or less. If slower, the question is preserved and progress, retry, or text fallback is clear. | Agents respond in 5 seconds. | PASS |
 
 ## 2. Lighthouse and manual accessibility evidence
 
-Performance score: \<FILL IN>  
-Accessibility score: \<FILL IN>  
-One important Lighthouse finding or "none listed": \<FILL IN>  
-Keyboard plus muted-video result: \<FILL IN>
+Performance score: 94 
+Accessibility score: 96
+One important Lighthouse finding or "none listed": Requests are blocking the page's initial render, which may delay LCP.
+Keyboard plus muted-video result: Using tab to switch each buttons and space to confirm(press).
 
 ## 3. Defect decision and retest
 
-Highest-severity finding: \<FILL IN OR NONE>  
-Severity: \<FILL IN - BLOCKER, SEVERE, MAJOR, MINOR, or NONE>  
-Smallest repair made: \<FILL IN OR "No repair required">  
-Focused retest result: \<FILL IN>
+Highest-severity finding: Reduce unused CSS.
+Severity: MINOR
+Smallest repair made: No repair required
+Focused retest result: 
 
 ## 4. Release gate
 
-Release decision: \<FILL IN - GO or NO-GO>  
-Decision reason: \<FILL IN>  
-GitHub Actions run: \<PASTE RUN URL>  
+Release decision: GO
+Decision reason: Further optimazation will be made and for now it is good to go.
+GitHub Actions run: Pending
 Release tag if GO: v0.9.0-rc1
 
 ## 5. Engineering and AI Use Log
