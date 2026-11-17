@@ -40,6 +40,6 @@ Release tag if GO: v0.9.0-rc1
 
 ## 5. Engineering and AI Use Log
 
-What I tested myself: \<FILL IN>  
-What remained human-reviewed rather than automated: \<FILL IN>  
-Known limitation carried into Week 11 Red Teaming: \<FILL IN>
+What I tested myself: 
+What remained human-reviewed rather than automated: 
+Known limitation carried into Week 11 Red Teaming: 
